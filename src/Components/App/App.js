@@ -1,11 +1,12 @@
 import About from "../About/About";
 import Navbar from "../Navbar/Navbar";
+import Slider from "../Slider/Slider";
 
 const App = () => {
   return (
     <>
       {" "}
-      <Navbar /> <About />
+      <Navbar /> <Slider /> <About />
     </>
   );
 };
