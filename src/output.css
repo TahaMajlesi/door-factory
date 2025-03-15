@@ -7,6 +7,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-300: oklch(0.808 0.114 19.571);
+    --color-red-400: oklch(0.704 0.191 22.216);
     --color-red-500: oklch(0.637 0.237 25.331);
     --color-yellow-400: oklch(0.852 0.199 91.936);
     --color-gray-400: oklch(0.707 0.022 261.325);
@@ -15,6 +16,10 @@
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -185,6 +190,9 @@
   .static {
     position: static;
   }
+  .sticky {
+    position: sticky;
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -224,6 +232,15 @@
       max-width: 96rem;
     }
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .my-5 {
+    margin-block: calc(var(--spacing) * 5);
+  }
+  .my-10 {
+    margin-block: calc(var(--spacing) * 10);
+  }
   .flex {
     display: flex;
   }
@@ -245,6 +262,12 @@
   .w-1\/12 {
     width: calc(1/12 * 100%);
   }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-10\/12 {
+    width: calc(10/12 * 100%);
+  }
   .w-full {
     width: 100%;
   }
@@ -256,6 +279,9 @@
   }
   .resize {
     resize: both;
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .flex-row-reverse {
     flex-direction: row-reverse;
@@ -271,8 +297,15 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
   }
+  .border-b-\[2px\] {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
   .border-black {
     border-color: var(--color-black);
+  }
+  .border-white {
+    border-color: var(--color-white);
   }
   .border-yellow-400 {
     border-color: var(--color-yellow-400);
@@ -283,6 +316,9 @@
   .bg-red-300 {
     background-color: var(--color-red-300);
   }
+  .bg-red-400 {
+    background-color: var(--color-red-400);
+  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -291,6 +327,9 @@
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .font-\[BYekan\,sans\] {
     font-family: BYekan,sans;
@@ -301,9 +340,25 @@
   .font-sans {
     font-family: var(--font-sans);
   }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .leading-5 {
+    --tw-leading: calc(var(--spacing) * 5);
+    line-height: calc(var(--spacing) * 5);
+  }
+  .leading-10 {
+    --tw-leading: calc(var(--spacing) * 10);
+    line-height: calc(var(--spacing) * 10);
   }
   .lowercase {
     text-transform: lowercase;
@@ -354,6 +409,13 @@
       }
     }
   }
+  .hover\:border-black {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-black);
+      }
+    }
+  }
 }
 @font-face {
   font-family: BYekan;
@@ -388,6 +450,10 @@
   syntax: "*";
   inherits: false;
   initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-outline-style {
   syntax: "*";

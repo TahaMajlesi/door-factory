@@ -1,10 +1,11 @@
+import About from "../About/About";
 import Navbar from "../Navbar/Navbar";
 
 const App = () => {
   return (
     <>
       {" "}
-      <Navbar />{" "}
+      <Navbar /> <About />
     </>
   );
 };
