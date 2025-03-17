@@ -21,18 +21,18 @@ const About = () => {
       >
         <SwiperSlide className="">
           <img src={image1} alt="" className="h-full" />
-        </SwiperSlide>
+        </SwiperSlide>{" "}
         <SwiperSlide>
           <img src={image2} alt="" className="h-full" />
-        </SwiperSlide>
+        </SwiperSlide>{" "}
         <SwiperSlide>
           <img src={image3} alt="" className="h-full" />
-        </SwiperSlide>
+        </SwiperSlide>{" "}
         <SwiperSlide>
           <img src={image4} alt="" className="h-full" />
         </SwiperSlide>
-        ...
-      </Swiper>
+        ...{" "}
+      </Swiper>{" "}
       <div className="w-6/12 flex bg-red-400 font-[BYekan,sans]  flex-col">
         <p className="text-3xl py-2 w-full flex flex-row-reverse">
           {" "}
@@ -42,7 +42,7 @@ const About = () => {
           {" "}
           شرکت ایران در نمایندگی رسمی شرکت گوگسو ترکیه{" "}
         </p>{" "}
-      </div>
+      </div>{" "}
     </div>
   );
 };
