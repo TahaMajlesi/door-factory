@@ -5,6 +5,7 @@ import Navbar from "../Navbar/Navbar";
 import Products from "../Products/Products";
 import Slider from "../Slider/Slider";
 import Gotop from "../Gotop/Gotop.js";
+import Customers from "../Customers/Customers.js";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Catalogue />
       <Whatsappbtn />
       <Gotop />
+      <Customers />
     </>
   );
 };
