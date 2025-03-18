@@ -8,6 +8,7 @@ import Gotop from "../Gotop/Gotop.js";
 import Customers from "../Customers/Customers.js";
 import Badges from "../Badges/Badges.js";
 import Faq from "../Faq/Faq.js";
+import Footer from "../Footer/Footer.js";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Gotop />
       <Customers />
       <Faq />
+      <Footer />
     </>
   );
 };
