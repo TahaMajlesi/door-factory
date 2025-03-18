@@ -7,6 +7,7 @@ import Slider from "../Slider/Slider";
 import Gotop from "../Gotop/Gotop.js";
 import Customers from "../Customers/Customers.js";
 import Badges from "../Badges/Badges.js";
+import Faq from "../Faq/Faq.js";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Whatsappbtn />
       <Gotop />
       <Customers />
+      <Faq />
     </>
   );
 };
